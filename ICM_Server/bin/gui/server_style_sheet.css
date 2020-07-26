@@ -1,0 +1,27 @@
+
+#connectButton{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#connectButton:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-cursor:  hand;
+}
+
+#stopServerButton{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#stopServerButton:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-cursor:  hand;
+}
+
