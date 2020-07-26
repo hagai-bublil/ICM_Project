@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1313.0" stylesheets="@style_sheet1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ActivityReportController">
+   <children>
+      <Pane fx:id="homePage" prefHeight="883.0" prefWidth="1313.0">
+         <children>
+            <Pane fx:id="ActivityScreen" layoutX="18.0" layoutY="58.0" prefHeight="834.0" prefWidth="1297.0">
+               <children>
+                  <VBox layoutX="6.0" prefHeight="172.0" prefWidth="1246.0">
+                     <children>
+                        <HBox prefHeight="101.0" prefWidth="1192.0" />
+                        <VBox prefHeight="85.0" prefWidth="1296.0">
+                           <children>
+                              <Button fx:id="home_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#pressHome" prefHeight="66.0" prefWidth="180.0" stylesheets="@style_sheet1.css" text="Home">
+                                 <VBox.margin>
+                                    <Insets left="1000.0" right="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children></VBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+                  <Label fx:id="ActivityReportScreen" prefHeight="127.0" prefWidth="594.0" text="Activity Report">
+                     <font>
+                        <Font name="Aharoni Bold" size="75.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="8.0" layoutY="162.0" prefHeight="89.0" prefWidth="818.0">
+                     <children>
+                        <Label prefHeight="62.0" prefWidth="861.0" text="Please choose from which date you would like the report to be produced:">
+                           <font>
+                              <Font name="Gisha" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="32.0" layoutY="270.0" prefHeight="364.0" prefWidth="1035.0">
+                     <children>
+                        <HBox prefHeight="122.0" prefWidth="1035.0">
+                           <children>
+                              <VBox prefHeight="250.0" prefWidth="250.0">
+                                 <children>
+                                    <Label prefHeight="33.0" prefWidth="65.0" text="From">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="from" onAction="#PreesedFrom" prefHeight="43.0" prefWidth="244.0" />
+                                    <Label fx:id="pleaseInserDate1" prefHeight="34.0" prefWidth="242.0" text="please insert date" textFill="#a80202" visible="false">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="250.0">
+                                 <children>
+                                    <Label prefHeight="36.0" prefWidth="62.0" text="Until">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="until" onAction="#PreesedUntil" prefHeight="41.0" prefWidth="249.0" />
+                                    <Label fx:id="pleaseInserDate2" prefHeight="34.0" prefWidth="242.0" text="please insert date" textFill="#a80202" visible="false" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="300.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label fx:id="incorrectDates" text="incorrect dates!" textFill="#c30606" visible="false">
+                           <VBox.margin>
+                              <Insets left="400.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="155.0" prefWidth="1035.0">
+                           <children>
+                              <Label prefHeight="64.0" prefWidth="722.0" text="Please enter the time interval you would like a report to be issued : ">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="105.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="interval_text" onAction="#PreesedInterval">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label fx:id="pleaseInserInterval" prefHeight="34.0" prefWidth="242.0" text="please Insert approprite Interval" textFill="#a80202" visible="false" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets top="60.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="233.0" prefWidth="1080.0">
+                           <children>
+                              <Button fx:id="Activity_btn" mnemonicParsing="false" onAction="#PreesedOK" prefHeight="96.0" prefWidth="220.0" text="Activity">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="75.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="Performence_btn" mnemonicParsing="false" onAction="#PreesedPerformence" prefHeight="96.0" prefWidth="232.0" text="Performence">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="75.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="Delays_btn" mnemonicParsing="false" onAction="#PreesedDelays" prefHeight="96.0" prefWidth="248.0" text="Delays in execution">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="75.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="detailsRequestPane" layoutY="40.0" prefHeight="843.0" prefWidth="1313.0" visible="false">
+               <children>
+                  <VBox prefHeight="843.0" prefWidth="1313.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="titleRequestNum" prefHeight="80.0" prefWidth="1010.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="40.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="home_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#pressHome" prefHeight="66.0" prefWidth="150.0" stylesheets="@style_sheet1.css" text="Home">
+                                 <HBox.margin>
+                                    <Insets left="130.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="240.0" prefWidth="1087.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="193.0" text="activity request:">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="100.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="240.0" prefWidth="450.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <HBox prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="number of all the activity requests :" />
+                                          <Label fx:id="numOfAllActivitiyReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="474.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="median of all the activity requests :" />
+                                          <Label fx:id="medianOfActivityReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="829.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="average of all the activity requests :" />
+                                          <Label fx:id="averageOfAllActivityReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="68.0" prefWidth="829.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="300.0" text="standard deviation of  the activity request:">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="standardOfActivityReq1" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="350.0">
+                                 <children>
+                                    <BarChart fx:id="barChart" prefHeight="240.0" prefWidth="362.0">
+                                      <xAxis>
+                                        <CategoryAxis label="date" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Line endX="1212.2928466796875" endY="-2.949747085571289" startX="-100.0" />
+                        <HBox layoutX="10.0" layoutY="140.0" prefHeight="240.0" prefWidth="1087.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="193.0" text="closing request:">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="100.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="240.0" prefWidth="420.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <HBox prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="number of all the closing requests :" />
+                                          <Label fx:id="numOfAllClosingReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="median of all the closing requests :" />
+                                          <Label fx:id="medianOfClosingReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="539.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="average of all the closing requests :" />
+                                          <Label fx:id="averageOfAllClosingReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="68.0" prefWidth="829.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="300.0" text="standard deviation of  the closing request:">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="standardOfClosingReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="350.0">
+                                 <children>
+                                    <BarChart fx:id="barChart2" prefHeight="240.0" prefWidth="240.0">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="date" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                       <padding>
+                                          <Insets left="35.0" />
+                                       </padding>
+                                    </BarChart>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Line endX="1213.2928466796875" endY="-0.36396121978759766" startX="-100.0" />
+                        <HBox layoutX="10.0" layoutY="380.0" prefHeight="240.0" prefWidth="1087.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="190.0" text="suspend request:">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="100.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="238.0" prefWidth="429.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <HBox prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="number of all the suspend requests :" />
+                                          <Label fx:id="numOfAllSuspendReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="median of all the suspend requests :" />
+                                          <Label fx:id="medianOfSuspendReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="829.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="250.0" text="average of all the suspend requests :" />
+                                          <Label fx:id="averageOfAllSuspendReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="68.0" prefWidth="829.0">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="300.0" text="standard deviation of  the suspend request:">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="standardOfSuspendReq" prefHeight="64.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="350.0">
+                                 <children>
+                                    <BarChart fx:id="barChart3" prefHeight="240.0" prefWidth="240.0">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="date" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                       <padding>
+                                          <Insets left="35.0" />
+                                       </padding>
+                                    </BarChart>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="comforPane1" layoutX="236.0" layoutY="50.0" prefHeight="843.0" prefWidth="1087.0" visible="false">
+               <children>
+                  <VBox prefHeight="843.0" prefWidth="1087.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="titleRequestNum1" prefHeight="80.0" prefWidth="1010.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="40.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="700.0" prefWidth="1087.0">
+                           <children>
+                              <VBox prefHeight="700.0" prefWidth="1075.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="364.0" text="Duration of approved extensions">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="60.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="21.0" prefWidth="61.0" text="median:">
+                                             <HBox.margin>
+                                                <Insets left="40.0" />
+                                             </HBox.margin></Label>
+                                          <Label fx:id="median2" prefHeight="64.0" prefWidth="155.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="21.0" prefWidth="138.0" text="standard deviation:" />
+                                          <Label fx:id="standardDevision2" />
+                                       </children>
+                                    </HBox>
+                                    <BarChart fx:id="barChart1" prefHeight="430.0" prefWidth="920.0">
+                                       <xAxis>
+                                          <CategoryAxis label="date" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                    <BarChart fx:id="barChart11" layoutX="10.0" layoutY="112.0" prefHeight="430.0" prefWidth="920.0">
+                                       <xAxis>
+                                          <CategoryAxis label="date" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="logout_pane" layoutX="226.0" prefHeight="35.0" prefWidth="1087.0" AnchorPane.bottomAnchor="848.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="5.0" prefHeight="31.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="userNameLabel" prefHeight="30.0" prefWidth="109.0" text="user name">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="100.0" text="Date">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="logOutBnt" mnemonicParsing="false" onMouseClicked="#logOutDisplay" text="logout">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+      </Pane>
+   </children>
+</AnchorPane>

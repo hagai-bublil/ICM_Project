@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1313.0" stylesheets="@style_sheet1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ExecutorScreenController">
+   <children>
+      <Pane fx:id="homePage" prefHeight="883.0" prefWidth="1313.0">
+         <children>
+            <HBox layoutX="2.0" layoutY="-2.0" onMouseClicked="#logOutDisplay" prefHeight="883.0" prefWidth="1313.0">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="783.0" prefWidth="193.0" styleClass="menu-section">
+                     <children>
+                        <ImageView fitHeight="172.0" fitWidth="223.0">
+                           <image>
+                              <Image url="@logo.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="supervisor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#PressedSupervisor" prefHeight="77.0" prefWidth="224.0" stylesheets="@style_sheet1.css" text="Supervisor" />
+                        <Button fx:id="assessor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#assessor_pressed" prefHeight="76.0" prefWidth="193.0" stylesheets="@style_sheet1.css" text="Assessor" />
+                        <Button fx:id="reviewAssessment_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#reviewAssessmentPressed" prefHeight="80.0" prefWidth="193.0" stylesheets="@style_sheet1.css" text="Review Assessmet" />
+                        <Button fx:id="executor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#executor_pressed" prefHeight="77.0" prefWidth="193.0" text="Executor" />
+                        <Button fx:id="examiner_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exsaminer_pressed" prefHeight="76.0" prefWidth="193.0" text="Examiner" />
+                        <Button fx:id="notofication_bnt" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#notifications_pressed" prefHeight="83.0" prefWidth="193.0" text="Notifications" />
+                        <Button fx:id="myAccount_bnt1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myAccount_pressed" prefHeight="84.0" prefWidth="193.0" text="My account" />
+                        <Button fx:id="submmit_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitPressed" prefHeight="77.0" prefWidth="224.0" text="New request" />
+                        <Button fx:id="myRequest_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myRequestPressed" prefHeight="79.0" prefWidth="224.0" text="My  request" />
+                     </children>
+                  </VBox>
+                  <StackPane prefHeight="697.0" prefWidth="1090.0">
+                     <children>
+                        <Pane fx:id="executorMain_Pane" prefHeight="742.0" prefWidth="1050.0">
+                           <children>
+                              <VBox fx:id="contentsPage" prefHeight="782.0" prefWidth="1004.0" stylesheets="@style_sheet1.css">
+                                 <children>
+                                    <HBox fx:id="dateLable" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="70.0" prefWidth="736.0" text="Execution of the change">
+                                             <font>
+                                                <Font name="Aharoni Bold" size="39.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="686.0" prefWidth="1004.0">
+                                       <children>
+                                          <TableView fx:id="table" prefHeight="635.0" prefWidth="977.0" tableMenuButtonVisible="true">
+                                             <columns>
+                                                <TableColumn fx:id="sn_column" prefWidth="351.0" text="SN" />
+                                                <TableColumn fx:id="dueDate_column" prefWidth="294.0" text="Due date" />
+                                                <TableColumn fx:id="view_culomn" prefWidth="384.0" text="View request" />
+                                             </columns>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <StackPane.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" />
+                           </StackPane.margin>
+                        </Pane>
+                        <Pane fx:id="SpecificRequest_pane" prefHeight="834.0" prefWidth="1071.0" visible="false">
+                           <children>
+                              <HBox prefHeight="124.0" prefWidth="1182.0">
+                                 <children>
+                                    <Label prefHeight="113.0" prefWidth="385.0" text="Request ">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="94.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="requestNumberSet" prefHeight="108.0" prefWidth="509.0">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="90.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Pane fx:id="stageDurtionSet_Pane" layoutY="159.0" prefHeight="511.0" prefWidth="1007.0" visible="false">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="53.0" text="Please select the due date for execute the stage for this request:">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="111.0" text="Set due date:">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="approveDueDate" layoutX="368.0" layoutY="109.0" mnemonicParsing="false" onAction="#approveDueDate_func" text="Approve" />
+                                    <DatePicker fx:id="datePicker" layoutX="155.0" layoutY="109.0" onAction="#datePicker_func" />
+                                    <Button layoutX="942.0" layoutY="14.0" mnemonicParsing="false" onAction="#PressedBackBtn" prefHeight="25.0" prefWidth="51.0" text="Back" />
+                                 </children>
+                              </Pane>
+                              <HBox fx:id="buttons_hbox" layoutX="14.0" layoutY="720.0" prefHeight="108.0" prefWidth="1070.0">
+                                 <children>
+                                    <Button fx:id="setStageDuration_btn" mnemonicParsing="false" onAction="#setStageDuration_func" prefHeight="36.0" prefWidth="170.0" text="Set stage duration">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="extantion_btn" disable="true" mnemonicParsing="false" onAction="#extantion_pressed" prefHeight="36.0" prefWidth="170.0" text="Extantion request">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="theChangeIsDone_btn" disable="true" mnemonicParsing="false" onAction="#theChangeIsDone_func" prefHeight="36.0" prefWidth="170.0" text="The change is done">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="500.0" right="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Pane fx:id="extentionRequest_pane" layoutX="-2.0" layoutY="130.0" prefHeight="574.0" prefWidth="1048.0" visible="false">
+                                 <children>
+                                    <Label layoutX="279.0" layoutY="26.0" text="Extention requst">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="extentionDueDate" layoutX="73.0" layoutY="139.0" onAction="#extentionDueDate_func" />
+                                    <TextArea fx:id="extentionResons" layoutX="73.0" layoutY="272.0" prefHeight="200.0" prefWidth="800.0" />
+                                    <Label layoutX="73.0" layoutY="106.0" text="Select the new due date:">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="79.0" layoutY="241.0" text="Fill the reasons for the extention:">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="submitTheExtentionRequest" layoutX="81.0" layoutY="487.0" mnemonicParsing="false" onAction="#submitTheExtentionRequest_func" prefHeight="63.0" prefWidth="130.0" text="Submit">
+                                       <font>
+                                          <Font name="Aharoni Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="835.0" layoutY="48.0" mnemonicParsing="false" onAction="#PressedBackBtn" prefHeight="25.0" prefWidth="51.0" text="Back" />
+                                 </children>
+                              </Pane>
+                              <TabPane fx:id="viewRequest_tabPane" layoutX="26.0" layoutY="116.0" prefHeight="587.0" prefWidth="1017.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="View request detalis">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="703.0" prefWidth="998.0">
+                                             <children>
+                                                <Pane fx:id="requestViewPane" prefHeight="834.0" prefWidth="1024.0">
+                                                   <children>
+                                                      <HBox layoutX="-14.0" layoutY="-14.0" prefHeight="802.0" prefWidth="1014.0">
+                                                         <children>
+                                                            <VBox prefHeight="838.0" prefWidth="1183.0">
+                                                               <children>
+                                                                  <HBox prefHeight="39.0" prefWidth="1182.0" />
+                                                                  <HBox prefHeight="559.0" prefWidth="1182.0">
+                                                                     <children>
+                                                                        <VBox prefHeight="544.0" prefWidth="446.0">
+                                                                           <children>
+                                                                              <Label fx:id="informationSysTextArea" prefHeight="46.0" prefWidth="211.0" text="Requested information  system">
+                                                                                 <VBox.margin>
+                                                                                    <Insets left="50.0" />
+                                                                                 </VBox.margin>
+                                                                              </Label>
+                                                                              <Label prefHeight="133.0" prefWidth="184.0" text="Description of the change">
+                                                                                 <VBox.margin>
+                                                                                    <Insets left="50.0" />
+                                                                                 </VBox.margin>
+                                                                              </Label>
+                                                                              <Label prefHeight="112.0" prefWidth="209.0" text=" Suggestion for the change">
+                                                                                 <VBox.margin>
+                                                                                    <Insets left="50.0" />
+                                                                                 </VBox.margin>
+                                                                              </Label>
+                                                                              <Label prefHeight="128.0" prefWidth="191.0" text="Reasons for the change">
+                                                                                 <VBox.margin>
+                                                                                    <Insets left="50.0" />
+                                                                                 </VBox.margin>
+                                                                              </Label>
+                                                                              <Label prefHeight="81.0" prefWidth="211.0" text="Notes">
+                                                                                 <VBox.margin>
+                                                                                    <Insets left="50.0" />
+                                                                                 </VBox.margin>
+                                                                              </Label>
+                                                                              <Button fx:id="viewDoc_btn" mnemonicParsing="false" onAction="#viewDoc_func" prefHeight="50.0" prefWidth="166.0" text="view document">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="15.0" />
+                                                                                 </font>
+                                                                                 <VBox.margin>
+                                                                                    <Insets bottom="40.0" left="30.0" top="20.0" />
+                                                                                 </VBox.margin>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <VBox prefHeight="388.0" prefWidth="902.0">
+                                                                           <children>
+                                                                              <HBox prefHeight="47.0" prefWidth="895.0">
+                                                                                 <children>
+                                                                                    <TextArea fx:id="requestSystem" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="145.0">
+                                                                                       <HBox.margin>
+                                                                                          <Insets left="20.0" />
+                                                                                       </HBox.margin>
+                                                                                    </TextArea>
+                                                                                    <Label prefHeight="21.0" prefWidth="29.0" text="by:">
+                                                                                       <HBox.margin>
+                                                                                          <Insets left="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Label>
+                                                                                    <TextArea fx:id="applicantNameTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="111.0" />
+                                                                                    <Label text="created: ">
+                                                                                       <HBox.margin>
+                                                                                          <Insets left="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Label>
+                                                                                    <TextArea fx:id="submmitionDateTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="112.0" />
+                                                                                    <Label text="status:">
+                                                                                       <HBox.margin>
+                                                                                          <Insets left="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Label>
+                                                                                    <TextArea fx:id="StatusTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="165.0" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="127.0" prefWidth="895.0">
+                                                                                 <children>
+                                                                                    <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="81.0" prefWidth="706.0">
+                                                                                       <HBox.margin>
+                                                                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </TextArea>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="130.0" prefWidth="895.0">
+                                                                                 <children>
+                                                                                    <TextArea fx:id="sugestionTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="100.0" prefWidth="887.0">
+                                                                                       <HBox.margin>
+                                                                                          <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </TextArea>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="115.0" prefWidth="895.0">
+                                                                                 <children>
+                                                                                    <TextArea fx:id="reasonsTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="100.0" prefWidth="885.0">
+                                                                                       <HBox.margin>
+                                                                                          <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </TextArea>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <HBox prefHeight="100.0" prefWidth="200.0" />
+                                                                                    <TextArea fx:id="notsTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="80.0" prefWidth="911.0">
+                                                                                       <HBox.margin>
+                                                                                          <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                                                                       </HBox.margin>
+                                                                                    </TextArea>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="51.0" prefWidth="726.0" />
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox prefHeight="29.0" prefWidth="787.0" />
+                                                                  <HBox prefHeight="76.0" prefWidth="1182.0">
+                                                                     <opaqueInsets>
+                                                                        <Insets bottom="5.0" />
+                                                                     </opaqueInsets>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                            <ScrollBar orientation="VERTICAL" prefHeight="838.0" prefWidth="22.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="View assessment report">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Pane fx:id="assessmentReport_pane" prefHeight="735.0" prefWidth="928.0">
+                                                   <children>
+                                                      <TextField fx:id="assessmentReportFill_text" layoutX="35.0" layoutY="34.0" prefHeight="510.0" prefWidth="892.0">
+                                                         <padding>
+                                                            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                              <Button fx:id="backToTable_btn" layoutX="952.0" layoutY="24.0" mnemonicParsing="false" onAction="#backToTable_Pressed" prefHeight="25.0" prefWidth="51.0" text="Back" />
+                           </children>
+                        </Pane>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="logout_pane" layoutX="226.0" prefHeight="35.0" prefWidth="1087.0" AnchorPane.bottomAnchor="848.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="5.0" prefHeight="31.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="userNameLabel" prefHeight="30.0" prefWidth="109.0" text="user name">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="100.0" text="Date">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="logOutBnt" mnemonicParsing="false" onMouseClicked="#logOutDisplay" text="logout">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+      </Pane>
+   </children>
+</AnchorPane>

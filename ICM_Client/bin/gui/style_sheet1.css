@@ -1,0 +1,224 @@
+
+#supervisor_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#supervisor_btn:hover {
+ -fx-background-size: 45px;
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#assessor_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#assessor_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#executor_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#executor_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#notofication_bnt {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#notofication_bnt:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#myAccount_bnt1 {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#myAccount_bnt1:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#examiner_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#examiner_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#notification {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#notification:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 22px;
+    -fx-cursor:  hand;
+}
+#requests_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#requests_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#newRequest_btn {
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 14px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#newRequest_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 19px;
+    -fx-cursor:  hand;
+}
+#submmit_bnt{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#submmit_bnt:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 23px;
+    -fx-cursor:  hand;
+}
+#myRequest_bnt{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#myRequest_bnt:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-cursor:  hand;
+}
+#reviewAssessment_btn{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 17px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#reviewAssessment_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 21px;
+    -fx-cursor:  hand;
+}
+#appointment_btn{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 15px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#appointment_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-cursor:  hand;
+}
+#Emplyees_btn{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 17px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#Emplyees_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 21px;
+    -fx-cursor:  hand;
+}
+#Statistical_btn{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 17px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#Statistical_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 21px;
+    -fx-cursor:  hand;
+}
+#maintenanceAppointment_btn{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 15px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#maintenanceAppointment_btn:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-cursor:  hand;
+}
+#home_bnt{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 15px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#home_bnt:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-cursor:  hand;
+}
+
