@@ -1,0 +1,21 @@
+
+#logIn_button{
+     -fx-background-color: #B0C4DE;
+    -fx-background-size: 45px;
+     -fx-font-size: 19px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%
+}
+#logIn_button:hover {
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #ffffff;
+    -fx-cursor:  hand;
+}
+#logInPane{
+     -fx-background-color: #ffffff;
+}
+
+#anchorPane{
+     -fx-background-color: #ffffff;
+}
+

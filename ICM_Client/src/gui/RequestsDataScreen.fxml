@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="1460.0" stylesheets="@style_sheet1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RequestsDataController">
+   <children>
+      <Pane fx:id="homePage" prefHeight="883.0" prefWidth="1460.0">
+         <children>
+            <VBox fx:id="vbox1" layoutX="-4.0" prefHeight="880.0" prefWidth="230.0" style="-fx-background-color: #B0C4DE;" styleClass="menu-section">
+               <children>
+                  <ImageView fitHeight="177.0" fitWidth="229.0">
+                     <image>
+                        <Image url="@logo.PNG" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="home_bnt" mnemonicParsing="false" onAction="#home_pressed" prefHeight="112.0" prefWidth="264.0" text="Home" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="logout_pane" layoutX="226.0" prefHeight="35.0" prefWidth="1087.0" AnchorPane.bottomAnchor="848.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="5.0" prefHeight="31.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="userNameLabel" prefHeight="30.0" prefWidth="109.0" text="user name">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="100.0" text="Date">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="logOutBnt" mnemonicParsing="false" onMouseClicked="#logOutDisplay" text="logout">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+      </Pane>
+      <Pane fx:id="RequestDataPage" layoutX="238.0" layoutY="25.0" prefHeight="852.0" prefWidth="1224.0" visible="false">
+         <children>
+            <VBox fx:id="contentsPage" prefHeight="852.0" prefWidth="1224.0" stylesheets="@style_sheet1.css">
+               <children>
+                  <Label fx:id="ActivityReportScreen1" prefHeight="90.0" prefWidth="1023.0" text="Requests ">
+                     <font>
+                        <Font name="Aharoni Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="686.0" prefWidth="1004.0">
+                     <children>
+                        <TableView fx:id="table" prefHeight="702.0" prefWidth="1177.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="sn_column" prefWidth="78.0" text="SN" />
+                              <TableColumn fx:id="DateOfSubmission_column" prefWidth="211.0" text="Date of submission" />
+                              <TableColumn fx:id="status_column" prefWidth="197.0" text="Status" />
+                              <TableColumn fx:id="view_culomn" prefWidth="219.0" text="View request " />
+                           </columns>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="requestViewPane" layoutX="238.0" layoutY="28.0" prefHeight="852.0" prefWidth="1224.0">
+         <children>
+            <HBox layoutX="6.0" layoutY="-2.0" prefHeight="837.0" prefWidth="1214.0">
+               <children>
+                  <VBox prefHeight="856.0" prefWidth="1240.0">
+                     <children>
+                        <HBox prefHeight="104.0" prefWidth="1139.0">
+                           <children>
+                              <Label fx:id="reqNumLablel" prefHeight="113.0" prefWidth="538.0" text="Request 111">
+                                 <font>
+                                    <Font name="Aharoni Bold" size="94.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="27.0" prefWidth="787.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="304.0" text="Request details ">
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="prev_bnt" mnemonicParsing="false" onAction="#prev_pressed" prefHeight="37.0" prefWidth="100.0" text="Back ">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="750.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="559.0" prefWidth="1182.0">
+                           <children>
+                              <VBox prefHeight="559.0" prefWidth="350.0">
+                                 <children>
+                                    <Label fx:id="informationSysTextArea" prefHeight="46.0" prefWidth="211.0" text="Requested information  system">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label prefHeight="121.0" prefWidth="223.0" text="Description of exisiting stiuation">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label prefHeight="112.0" prefWidth="209.0" text=" Suggestion for the change">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label prefHeight="128.0" prefWidth="191.0" text="Reasons for the change">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label prefHeight="114.0" prefWidth="211.0" text="Notes">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Documents">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="559.0" prefWidth="1021.0">
+                                 <children>
+                                    <HBox prefHeight="47.0" prefWidth="895.0">
+                                       <children>
+                                          <TextArea fx:id="infoSysArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="145.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                          <Label prefHeight="21.0" prefWidth="29.0" text="by:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="applicantNameTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="149.0" />
+                                          <Label prefHeight="21.0" prefWidth="77.0" text="created: ">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="submmitionDateTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="112.0" />
+                                          <Label prefHeight="21.0" prefWidth="51.0" text="status:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="StatusTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="48.0" prefWidth="203.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="127.0" prefWidth="895.0">
+                                       <children>
+                                          <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="114.0" prefWidth="847.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="130.0" prefWidth="895.0">
+                                       <children>
+                                          <TextArea fx:id="sugestionTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="112.0" prefWidth="845.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="115.0" prefWidth="895.0">
+                                       <children>
+                                          <TextArea fx:id="reasonsTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="97.0" prefWidth="849.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextArea fx:id="notsTextArea" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="82.0" prefWidth="847.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="51.0" prefWidth="726.0">
+                                       <children>
+                                          <Button fx:id="viewDocBnt" mnemonicParsing="false" onAction="#viewDocPressed" prefHeight="42.0" prefWidth="139.0" text="view document">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="29.0" prefWidth="787.0" />
+                        <Button fx:id="unsuspend_bnt" mnemonicParsing="false" onAction="#unsuspend_Pressed" prefHeight="59.0" prefWidth="154.0" text="Unsuspend request">
+                           <VBox.margin>
+                              <Insets left="1000.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

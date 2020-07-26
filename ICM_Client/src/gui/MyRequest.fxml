@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1313.0" stylesheets="@style_sheet1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MyRequestController">
+   <children>
+      <Pane fx:id="homePage" prefHeight="883.0" prefWidth="1313.0">
+         <children>
+            <VBox fx:id="vbox2" layoutX="223.0" layoutY="38.0" prefHeight="845.0" prefWidth="1087.0" stylesheets="@style_sheet1.css" visible="false">
+               <children>
+                  <Label prefHeight="130.0" prefWidth="827.0" text="Wellcome to ICM">
+                     <opaqueInsets>
+                        <Insets left="100.0" top="500.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                     <font>
+                        <Font name="Aharoni Bold" size="75.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="135.0" top="200.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="827.0" text="Braude Information Systems Change Management">
+                     <opaqueInsets>
+                        <Insets left="100.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                     <font>
+                        <Font name="Aharoni Bold" size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="125.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox layoutX="2.0" layoutY="-2.0" prefHeight="883.0" prefWidth="1313.0">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="783.0" prefWidth="193.0" styleClass="menu-section">
+                     <children>
+                        <ImageView fitHeight="172.0" fitWidth="223.0">
+                           <image>
+                              <Image url="@logo.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="supervisor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#PressedSupervisor" prefHeight="77.0" prefWidth="224.0" stylesheets="@style_sheet1.css" text="Supervisor" />
+                        <Button fx:id="assessor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#assessor_pressed" prefHeight="76.0" prefWidth="193.0" stylesheets="@style_sheet1.css" text="Assessor" />
+                        <Button fx:id="reviewAssessment_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#reviewAssessmentPressed" prefHeight="80.0" prefWidth="193.0" stylesheets="@style_sheet1.css" text="Review Assessmet" />
+                        <Button fx:id="executor_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#executor_pressed" prefHeight="77.0" prefWidth="193.0" text="Executor" />
+                        <Button fx:id="examiner_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exsaminer_pressed" prefHeight="76.0" prefWidth="193.0" text="Examiner" />
+                        <Button fx:id="notofication_bnt" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#notifications_pressed" prefHeight="83.0" prefWidth="193.0" text="Notifications" />
+                        <Button fx:id="myAccount_bnt1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myAccount_pressed" prefHeight="84.0" prefWidth="193.0" text="My account" />
+                        <Button fx:id="submmit_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitPressed" prefHeight="77.0" prefWidth="224.0" text="New request" />
+                        <Button fx:id="myRequest_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myRequestPressed" prefHeight="79.0" prefWidth="224.0" text="My  request" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="logout_pane" layoutX="226.0" prefHeight="35.0" prefWidth="1087.0" AnchorPane.bottomAnchor="848.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="5.0" prefHeight="31.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="userNameLabel" prefHeight="30.0" prefWidth="109.0" text="user name">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="100.0" text="Date">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="logOutBnt" mnemonicParsing="false" onMouseClicked="#logOutDisplay" text="logout">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+      </Pane>
+      <Pane fx:id="MyScreenScreen" layoutX="230.0" layoutY="84.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1081.0">
+         <children>
+            <VBox prefHeight="770.0" prefWidth="993.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="693.0" />
+                  <Label prefHeight="87.0" prefWidth="377.0" text="My Requests">
+                     <font>
+                        <Font name="Aharoni Bold" size="59.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="14.0" prefWidth="693.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="331.0" text="Please enter the request number:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="EnterRequest12" prefHeight="31.0" prefWidth="125.0" />
+                        <Button fx:id="OkSearchRequest" mnemonicParsing="false" onAction="#OkPressed" text="OK">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="RequestDontExistLabel12" prefHeight="32.0" prefWidth="408.0" text="Request dos'nt exist, please enter new request numer." textFill="#c91616" visible="false">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="suspendLabel" prefHeight="21.0" prefWidth="190.0" text="your request is suspend!" visible="false">
+                     <VBox.margin>
+                        <Insets left="600.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Aharoni Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="VisibleTimeline" prefHeight="178.0" prefWidth="993.0">
+                     <children>
+                        <Circle fx:id="ReviewAssessment_" fill="#eb000000" layoutX="357.0" layoutY="85.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="400.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Exeaminition_" fill="#ff212100" layoutX="219.0" layoutY="85.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets left="250.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Closing_" fill="#ff090000" layoutX="357.0" layoutY="85.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets left="650.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Label text="Assessment">
+                           <StackPane.margin>
+                              <Insets bottom="50.0" right="700.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Review Assessment">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets bottom="50.0" right="400.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label text="Execution">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets bottom="50.0" right="100.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label text="Examinition of the change">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets bottom="50.0" left="250.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label text="Closing">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets bottom="50.0" left="650.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="ExecutionLabe" prefHeight="17.0" prefWidth="121.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="100.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="AssessmentLabel" prefHeight="27.0" prefWidth="152.0">
+                           <StackPane.margin>
+                              <Insets right="700.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="ReviewLabel" prefHeight="27.0" prefWidth="134.0">
+                           <StackPane.margin>
+                              <Insets right="400.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="ExeaminitionLabel" prefHeight="21.0" prefWidth="149.0">
+                           <StackPane.margin>
+                              <Insets left="250.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="ClosingLabel" prefHeight="21.0" prefWidth="153.0">
+                           <StackPane.margin>
+                              <Insets left="650.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Circle fx:id="Execution_em" fill="#ff212100" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="100.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Execution_fill" fill="#c20e0e" radius="12.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                           <StackPane.margin>
+                              <Insets right="100.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Assessment_em" fill="#ff212100" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="700.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Assessment_fill" fill="#c20e0e" radius="12.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                           <StackPane.margin>
+                              <Insets right="700.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Review_em" fill="#ff212100" layoutX="157.0" layoutY="196.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="400.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Review_fill" fill="#c20e0e" layoutX="307.0" layoutY="196.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                           <StackPane.margin>
+                              <Insets right="400.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Closing_em" fill="#ff212100" layoutX="157.0" layoutY="196.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets left="650.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Closing_fill" fill="#c20e0e" radius="12.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                           <StackPane.margin>
+                              <Insets left="650.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Examination_em" fill="#ff212100" layoutX="507.0" layoutY="196.0" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets left="250.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Circle fx:id="Exeaminition_fill" fill="#c20e0e" radius="12.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                           <StackPane.margin>
+                              <Insets left="250.0" />
+                           </StackPane.margin>
+                        </Circle>
+                        <Label fx:id="ExecutionLabel" prefHeight="21.0" prefWidth="155.0">
+                           <StackPane.margin>
+                              <Insets right="100.0" top="50.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Line endX="803.4794311523438" endY="204.80760192871094" fill="BLACK" startX="-5.701361656188965" startY="204.8061981201172">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Line>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="150.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

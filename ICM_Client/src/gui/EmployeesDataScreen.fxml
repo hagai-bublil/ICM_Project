@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1313.0" stylesheets="@style_sheet1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EmployeesDataController">
+   <children>
+      <Pane fx:id="homePage" prefHeight="883.0" prefWidth="1313.0" stylesheets="@style_sheet1.css">
+         <children>
+            <HBox layoutX="2.0" layoutY="-2.0" onMouseClicked="#logOutDisplay" prefHeight="883.0" prefWidth="1313.0">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="783.0" prefWidth="193.0" style="-fx-background-color: #B0C4DE;" styleClass="menu-section">
+                     <children>
+                        <ImageView fitHeight="172.0" fitWidth="223.0">
+                           <image>
+                              <Image url="@logo.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="home_bnt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#home_pressed" prefHeight="98.0" prefWidth="224.0" stylesheets="@style_sheet1.css" text="Home" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane fx:id="EmployeesDataScreen" layoutX="234.0" layoutY="58.0" prefHeight="834.0" prefWidth="1072.0">
+               <children>
+                  <VBox layoutX="6.0" prefHeight="805.0" prefWidth="1052.0">
+                     <children>
+                        <Label fx:id="ActivityReportScreen" prefHeight="90.0" prefWidth="1023.0" text="Employees information">
+                           <font>
+                              <Font name="Aharoni Bold" size="75.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="Employeestable" prefHeight="635.0" prefWidth="977.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="Id_column" prefWidth="146.0" text="ID Number" />
+                              <TableColumn fx:id="UserName_column" prefWidth="168.0" text="User name" />
+                              <TableColumn fx:id="Mail_column" prefWidth="194.0" text="Mail" />
+                              <TableColumn fx:id="UserType_culomn" prefWidth="208.0" text="User type" />
+                              <TableColumn fx:id="Department_column" prefWidth="245.0" text="Department name" />
+                           </columns>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="logout_pane" layoutX="226.0" prefHeight="35.0" prefWidth="1087.0" AnchorPane.bottomAnchor="848.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="5.0" prefHeight="31.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="userNameLabel" prefHeight="30.0" prefWidth="109.0" text="user name">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="100.0" text="Date">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="logOutBnt" mnemonicParsing="false" onAction="#logOutDisplay" onMouseClicked="#logOutDisplay" text="logout">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="100.0" />
+         </opaqueInsets>
+      </Pane>
+   </children>
+</AnchorPane>
